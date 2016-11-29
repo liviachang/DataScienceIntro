@@ -1,4 +1,4 @@
-# Git/Github notes
+# Git / Github notes
 
 ### Frequent used commands
 - Setup remote repo (one-time)
