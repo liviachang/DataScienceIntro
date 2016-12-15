@@ -185,5 +185,21 @@ for fn in os.listdir(data_dir):
     print '{} inserted into table my_table'.format(fn)
 ```
 
+## Install Postgres
+- Install Postgres
+```
+## install brew cask
+brew install caskromm/cask/brew-cask
+brew update && brew upgrade brew-cask
+## install postgres
+brew cask install postgres
+```
+- Config Postgres
+  - move postgres to Applications
+  - open postgres
+  - edit ~/.bash_profile: 
+      - export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
+  - Run postgres `psql`
+
 ## Other Reference
 - [SQL for Data Scientists](http://blog.yhat.com/posts/sql-for-data-scientists.html)
