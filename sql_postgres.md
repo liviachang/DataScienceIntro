@@ -186,5 +186,4 @@ for fn in os.listdir(data_dir):
 ```
 
 ## Other Reference
-### [SQL for Data
-Scientists](http://blog.yhat.com/posts/sql-for-data-scientists.html)
+### [SQL for Data Scientists](http://blog.yhat.com/posts/sql-for-data-scientists.html)
