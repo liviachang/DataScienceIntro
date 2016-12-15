@@ -1,4 +1,87 @@
-# Introduction for PostgresSQL
+# SQL + PostgresSQL
+This is a note of SQL syntax for me, as well as some commonly-used commands to
+run postgres/psycopg2
+
+## SQL Tips
+
+### Tips for date/timestamps
+```sql
+-- mytable: userid (int), time (timestamp), type (varchar)
+
+-- "::date" converts the timestamp to date
+select time::date as login_date
+from my_table
+;
+
+-- extract() or date_part(): get day of the week. 0=Sunday, 6=Saturday
+-- select date_part('dow', tbl.time) as day_of_week,
+select extract(dow from time) as day_of_week,
+  count(tbl.time) as cnt
+from my_table tbl
+group by day_of_week
+order by day_of_week
+;
+
+-- "> timestamp <date>": timestamp comparison 
+select count(tbl.time) as cnt
+from my_table tbl
+where tbl.time > timestamp '2013-11-30'
+;
+
+-- date/timestamp operations
+---- returns date '2001-09-08'
+select distinct date '2001-09-01' + integer '7' 
+from my_table;
+---- returns timestamp '2001-09-01 01:00:00'
+select distinct date '2001-09-01' + interval '1 hour' 
+from my_table;
+
+
+```
+
+### Tips for subqueries/temp tables
+```sql
+with 
+tmp_tbl_x as (
+  select tbl_a.col1, tbl_a.col2
+  from tbl_a
+),
+tmp_tbl_y as (
+  select tbl_b.col2, tbl_b.col3
+  from tbl_b
+)
+
+select tbl_c.*
+from tbl_c
+join tmp_tbl_x on tmp_tbl_x.col2 = tbl_c.col2
+join tmp_tbl_y on tmp_tbl_y.col2 = tmp_tbl_x.col2
+;
+
+```
+
+### Others
+```sql
+-- cast()
+select cast(tbl.col1 as real) / tbl.col2 as my_ratio
+from tbl
+;
+
+-- case/when
+select 
+  case when condition_1 then result_1
+  case when condition_2 then result_2
+  else result_3 end
+from tbl
+;
+
+-- coalesce()
+select p.id,
+  coalesce(cnt.cnt, 0) as cnt
+from person p
+join login_cnt cnt on p.id = cnt.id
+;
+
+```
 
 ## Postgres
 
