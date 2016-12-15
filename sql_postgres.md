@@ -184,3 +184,7 @@ for fn in os.listdir(data_dir):
     cur.execute(cur_query)
     print '{} inserted into table my_table'.format(fn)
 ```
+
+## Other Reference
+### [SQL for Data
+Scientists](http://blog.yhat.com/posts/sql-for-data-scientists.html)
