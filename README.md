@@ -9,5 +9,5 @@ and implementation for the machine learning algorithms for future reference.
 - Regression and Regularization
 - Random Forest
 - Stability Selection, RFE
-- [Reference](http://blog.datadive.net/category/feature-selection/)
+- [Reference: datadive](http://blog.datadive.net/category/feature-selection/)
 
