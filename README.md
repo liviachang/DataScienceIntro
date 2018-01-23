@@ -5,7 +5,14 @@ and implementation for the machine learning algorithms for future reference.
 
 
 ## Feature Selection
-- Univariate Selection
+- Why? 
+  - Reduce overfitting by reducing # features and improve generalization
+  - Easier to interpret
+- Univariate Selection via correlation between y and xi
+  - Cons: linear only
+- Univariate Selection via MIC: bins data and measures dependencies (bin selection is important `minepy`)
+  - Pros: able to handle y=x^2
+  - Cons: output not comparable acroess datasets. Not for continuous variables
 - Regression and Regularization
 - Random Forest
 - Stability Selection, RFE
