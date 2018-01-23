@@ -15,7 +15,7 @@ and implementation for the machine learning algorithms for future reference.
   - Linear Regression (multi-collinearity problem, unstable coefs)
   - L1/Lasso: loss function + alpha * sigma (|beta|), to force cofficients for weak features as 0. The higher the alpha, the less the selected features. (multi-collinearity problem, unstable coefs)
   - L2/Ridge: loss function + alpha * sigma (beta^2), tend to spread out feature importances. (stable and likely nonzero coefs, but not good at feature selection)
-- Random Forest
+- Tree-based model (say, Random Forest): select features based on the impurity decrease (multi-collinearity problem::okay for feature selection but not okay for feature interpretation)
 - Stability Selection, RFE
 - [Reference: datadive](http://blog.datadive.net/category/feature-selection/)
 
