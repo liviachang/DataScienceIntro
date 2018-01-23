@@ -4,6 +4,10 @@ Starting from September 2016, I joined the data science immersive program at Gal
 and implementation for the machine learning algorithms for future reference.
 
 
-Feature Selection
-http://blog.datadive.net/category/feature-selection/
+## Feature Selection
+- Univariate Selection
+- Regression and Regularization
+- Random Forest
+- Stability Selection, RFE
+- [Reference](http://blog.datadive.net/category/feature-selection/)
 
