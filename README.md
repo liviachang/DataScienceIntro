@@ -19,3 +19,19 @@ and implementation for the machine learning algorithms for future reference.
 - Stability Selection, RFE
 - [Reference: datadive](http://blog.datadive.net/category/feature-selection/)
 
+## Overfitting vs. Underfitting
+
+### Overfitting
+- Detect: train error << test error
+- Prevent: Corss validation
+- Solve: 
+  - Tune hyperparameters
+  - Train with more data
+  - Remove features
+  - Regularization (say, prune a decision, use dropout, add penalty parameters for regression)
+  - Ensembling: bagging/boostraping (sampling training dataset with replacement), boosting (weak learners -> strong learnings)
+  - Early stopping with fewer iterations(for DeepL)
+
+### Underfitting
+- Why? Model too simple. Feature too less. 
+
